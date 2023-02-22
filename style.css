@@ -10,7 +10,7 @@
 .dot {
   position: absolute;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #d3d3d3;
   width: 10px;
   height: 10px;
 }
