@@ -1,15 +1,67 @@
-// Create 50 dots and add them to the background
-for (var i = 0; i < 50; i++) {
-  var dot = document.createElement("div");
-  dot.className = "dot";
-  document.getElementById("background").appendChild(dot);
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+let dots = [];
+let lines = [];
+
+class Dot {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.radius = 1;
+    this.color = '#fff';
+  }
+  
+  draw() {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.closePath();
+  }
 }
 
-// Move the dots randomly every 2 seconds
-setInterval(function() {
-  var dots = document.getElementsByClassName("dot");
-  for (var i = 0; i < dots.length; i++) {
-    dots[i].style.top = Math.floor(Math.random() * 101) + "%";
-    dots[i].style.left = Math.floor(Math.random() * 101) + "%";
+class Line {
+  constructor(dot1, dot2) {
+    this.dot1 = dot1;
+    this.dot2 = dot2;
+    this.color = '#fff';
   }
-}, 2000);
+  
+  draw() {
+    ctx.beginPath();
+    ctx.strokeStyle = this.color;
+    ctx.moveTo(this.dot1.x, this.dot1.y);
+    ctx.lineTo(this.dot2.x, this.dot2.y);
+    ctx.stroke();
+    ctx.closePath();
+  }
+}
+
+function init() {
+  // Set canvas dimensions
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  // Create dots
+  for (let i = 0; i < 50; i++) {
+    let x = Math.random() * canvas.width;
+    let y = Math.random() * canvas.height;
+    let dot = new Dot(x, y);
+    dots.push(dot);
+  }
+  
+  // Create lines between dots
+  for (let i = 0; i < dots.length; i++) {
+    for (let j = i + 1; j < dots.length; j++) {
+      let distance = Math.sqrt(Math.pow(dots[i].x - dots[j].x, 2) + Math.pow(dots[i].y - dots[j].y, 2));
+      if (distance < 200) {
+        let line = new Line(dots[i], dots[j]);
+        lines.push(line);
+      }
+    }
+  }
+}
+
+function animate() {
+
