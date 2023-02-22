@@ -67,5 +67,24 @@ function animate() {
   // Clear canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-  // Move dots randomly
+  // Update dot positions
   for (let i = 0; i < dots.length; i++) {
+    dots[i].draw();
+    dots[i].x += Math.random() * 2 - 1;
+    dots[i].y += Math.random() * 2 - 1;
+  }
+  
+  // Draw lines between dots
+  for (let i = 0; i < lines.length; i++) {
+    lines[i].draw();
+  }
+  
+  // Request animation frame
+  requestAnimationFrame(animate);
+}
+
+// Initialize canvas
+init();
+
+// Start animation
+animate();
