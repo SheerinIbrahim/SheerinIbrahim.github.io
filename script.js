@@ -64,4 +64,8 @@ function init() {
 }
 
 function animate() {
-
+  // Clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  // Move dots randomly
+  for (let i = 0; i < dots.length; i++) {
