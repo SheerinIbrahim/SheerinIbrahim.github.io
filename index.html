@@ -1,71 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>ML Engineer Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
   </head>
   <body>
     <header>
       <nav>
-        <ul>
+        <div class="logo">
+          <a href="#">Portfolio</a>
+        </div>
+        <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
+      <div class="hero">
+        <h1>Hi, I'm Jane Doe</h1>
+        <p>I'm a web developer specializing in front-end development</p>
+        <a href="#portfolio" class="btn">View My Work</a>
+      </div>
     </header>
     <main>
       <section id="about">
-        <h1>About Me</h1>
-        <p>Hi, I'm John Doe, an ML engineer with 5 years of experience in the industry. My passion for machine learning started during my undergraduate studies, and since then, I've worked on a variety of projects, ranging from computer vision to natural language processing.</p>
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod aliquet magna, non malesuada odio fermentum quis. Sed eget hendrerit urna, eu pharetra nisl. Proin fringilla interdum velit, in ultrices orci suscipit vel. Nulla vestibulum scelerisque turpis. Sed id dolor vitae velit dignissim pharetra. In at lectus ullamcorper, fermentum lacus a, accumsan justo. Integer tristique augue in sapien elementum malesuada.</p>
+        </div>
+        <div class="about-img">
+          <img src="img/about-img.jpg" alt="Jane Doe">
+        </div>
       </section>
-      <section id="projects">
-        <h1>Projects</h1>
-        <ul>
+      <section id="services">
+        <h2>Services</h2>
+        <ul class="services-list">
           <li>
-            <h2>Project 1</h2>
-            <p>Description of project 1.</p>
+            <div class="service-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod aliquet magna, non malesuada odio fermentum quis.</p>
           </li>
           <li>
-            <h2>Project 2</h2>
-            <p>Description of project 2.</p>
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Responsive Design</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod aliquet magna, non malesuada odio fermentum quis.</p>
           </li>
           <li>
-            <h2>Project 3</h2>
-            <p>Description of project 3.</p>
+            <div class="service-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>SEO</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod aliquet magna, non malesuada odio fermentum quis.</p>
           </li>
         </ul>
       </section>
-      <section id="skills">
-        <h1>Skills</h1>
-        <ul>
-          <li>Python</li>
-          <li>TensorFlow</li>
-          <li>PyTorch</li>
-          <li>Scikit-Learn</li>
-          <li>SQL</li>
-        </ul>
-      </section>
-      <section id="contact">
-        <h1>Contact Me</h1>
-        <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name"><br>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email"><br>
-          <label for="message">Message:</label><br>
-          <textarea id="message" name="message" rows="5" cols="40"></textarea><br>
-          <input type="submit" value="Send">
-        </form>
-      </section>
-    </main>
-    <footer>
-      <p>Copyright © 2023</p>
-    </footer>
-  </body>
-</html>
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <ul class="portfolio-list">
+          <li>
+            <a href="#">
+              <img src="
 
 
 
