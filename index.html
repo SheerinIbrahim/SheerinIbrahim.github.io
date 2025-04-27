@@ -1,162 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sheerin Ibrahim</title>
-
-  <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet">
-
-  <!-- Font Awesome for icons -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    rel="stylesheet">
-
-  <style>
-    /* Reset & base */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #fafafa;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      color: #333;
-    }
-
-    /* Particles container */
-    #particles-js {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-    }
-
-    /* Card */
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-      padding: 3rem;
-      text-align: center;
-      width: 50%;
-      min-width: 280px;
-    }
-    @media (max-width: 768px) {
-      .card { width: 80%; }
-    }
-
-    /* Title */
-    .card h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    .card h1 .blue { color: #6C63FF; }
-    .card h1 .red  { color: #FF6584; }
-
-    /* Subtitle */
-    .card p {
-      font-size: 1.2rem;
-      color: #666;
-      margin-bottom: 2rem;
-    }
-
-    /* Social links */
-    .social-links a {
-      margin: 0 1rem;
-      font-size: 1.5rem;
-      color: inherit;
-      transition: transform .2s, color .2s;
-    }
-    .social-links a.github   { color: #333; }
-    .social-links a.linkedin { color: #0077B5; }
-    .social-links a.email    { color: #EA4335; }
-    .social-links a:hover {
-      transform: translateY(-3px);
-      color: #000;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheerin Ibrahim - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.40.1/dist/tsparticles.bundle.min.js"></script>
 </head>
 <body>
-
-  <!-- Particles.js -->
-  <div id="particles-js"></div>
-
-  <!-- Content card -->
-  <div class="card">
-    <h1>
-      <span class="blue">Sheerin</span>
-      <span class="red">Ibrahim</span>
-    </h1>
-    <p>AI Engineer &amp; Data Scientist<br>Passionate about AI, ML, and Robotics</p>
-    <div class="social-links">
-      <a href="https://github.com/SheerinIbrahim"    class="github"   target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/sheerin-ibrahim/" class="linkedin" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="mailto:sheerinsultana96@gmail.com"     class="email"    title="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
+    <div class="container">
+        <div class="content">
+            <h1>Sheerin Ibrahim</h1>
+            <p class="description">AI Engineer | Data Scientist | Enthusiast of Innovation</p>
+            <div class="links">
+                <a href="https://www.linkedin.com/in/sheerin-ibrahim/" target="_blank">
+                    <button class="link-button">LinkedIn</button>
+                </a>
+                <a href="mailto:sheerinsultana96@gmail.com">
+                    <button class="link-button">Email</button>
+                </a>
+                <a href="https://github.com/SheerinIbrahim" target="_blank">
+                    <button class="link-button">GitHub</button>
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- tsParticles library -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.4/tsparticles.bundle.min.js"></script>
-  <script>
-    // Initialize particles after library loads
-    tsParticles.load("particles-js", {
-      particles: {
-        number: { value: 80, density: { enable: true, area: 800 } },
-        color: { value: "#999999" },
-        shape: { type: "circle" },
-        opacity: {
-          value: 0.5,
-          random: true,
-          anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
-        },
-        size: {
-          value: 5,
-          random: true,
-          anim: { enable: true, speed: 5, size_min: 0.1, sync: false }
-        },
-        links: {
-          enable: true,
-          distance: 150,
-          color: "#cccccc",
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 3,
-          direction: "none",
-          random: true,
-          straight: false,
-          outModes: { default: "out" }
-        }
-      },
-      interactivity: {
-        events: {
-          onHover: { enable: true, mode: "grab" },
-          onClick: { enable: true, mode: "push" }
-        },
-        modes: {
-          grab: { distance: 200, links: { opacity: 0.5 } },
-          push: { quantity: 4 }
-        }
-      },
-      detectRetina: true,
-      background: { color: "#fafafa" }
-    });
-  </script>
+    <div id="tsparticles"></div>
+
+    <script>
+        tsParticles.load("tsparticles", {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                shape: {
+                    type: "circle"
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 4,
+                        size_min: 0.1
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        opacity_min: 0.1
+                    }
+                },
+                links: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out"
+                }
+            }
+        });
+    </script>
 </body>
 </html>
