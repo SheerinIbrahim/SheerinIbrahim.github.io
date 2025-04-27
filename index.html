@@ -1,54 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sheerin Ibrahim's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sheerin Ibrahim | Portfolio</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Pre Loader -->
-    <div class="loader-container">
-        <div class="loader"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <a href="#home" class="logo">Sheerin Ibrahim</a>
+    <div id="burger">&#9776;</div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1>Hi, I’m <span>Sheerin Ibrahim</span></h1>
+      <p>AI Engineer &amp; Data Science Enthusiast</p>
+      <a href="#projects" class="btn">View My Work</a>
     </div>
+  </section>
 
-    <!-- Navbar -->
-    <header>
-        <a href="#" class="logo">Sheerin Ibrahim</a>
-        <div id="menu" class="menu-btn">&#9776;</div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="grid">
+      <!-- Project Card 1 -->
+      <div class="card">
+        <img src="proj1.png" alt="Project One">
+        <h3>Gesture Volume Control</h3>
+        <p>Use hand gestures to control system volume in real-time.</p>
+        <a href="https://github.com/SheerinIbrahim/GestureBasedVolumeControl"
+           target="_blank"
+           class="btn-outline">View Code</a>
+      </div>
+      <!-- Project Card 2 -->
+      <div class="card">
+        <img src="proj2.png" alt="Project Two">
+        <h3>Face Mask Detector</h3>
+        <p>Detects mask usage in public spaces using OpenCV &amp; TensorFlow.</p>
+        <a href="https://github.com/SheerinIbrahim/FaceMaskDetector"
+           target="_blank"
+           class="btn-outline">View Code</a>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="home">
-        <div id="particles-js"></div>
-        <div class="content">
-            <h2>Hi, I'm <span>Sheerin Ibrahim</span></h2>
-            <p>Welcome to my portfolio! I'm an AI Engineer passionate about data science and technology.</p>
-            <a href="#contact" class="btn">Contact Me <i class="fa fa-arrow-right"></i></a>
-        </div>
-        <div class="image">
-            <img src="your-image.jpg" alt="Sheerin Ibrahim">
-        </div>
-    </section>
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skill-list">
+      <span>Python</span>
+      <span>Machine Learning</span>
+      <span>Deep Learning</span>
+      <span>Computer Vision</span>
+      <span>Natural Language Processing</span>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="row">
-            <div class="image">
-                <img src="your-image.jpg" alt="About Sheerin">
-            </div>
-            <div class="content">
-                <h3>About Me</h3>
-                <p>I'm an AI Engineer and data science enthusiast with a focus on machine learning, deep learning, and cloud computing.</p>
-                <div class="box-container">
-                    <div class="box">
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <p>Email me at <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <div class="socials">
+      <a href="https://github.com/SheerinIbrahim" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    // ParticlesJS config
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3, random: true },
+        line_linked: {
+          enable: true, distance: 150,
+          color: "#ffffff", opacity: 0.4, width: 1
+        },
+        move: { enable: true, speed: 3, out_mode: "out" }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          grab: { distance: 200, line_linked: { opacity: 0.5 }},
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+    // Navbar toggle
+    const burger = document.getElementById("burger"),
+          navLinks = document.getElementById("nav-links");
+    burger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute("href"))
+                .scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+</html>
