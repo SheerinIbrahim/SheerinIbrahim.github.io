@@ -82,6 +82,12 @@
       transform: translateY(-3px);
       color: #000;
     }
+
+    /* Remove underline from social links */
+    .social-links a {
+      text-decoration: none;
+    }
+
   </style>
 </head>
 <body>
@@ -112,50 +118,52 @@
   <!-- tsParticles library -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.4/tsparticles.bundle.min.js"></script>
   <script>
-    // Initialize particles after library loads
-    tsParticles.load("particles-js", {
-      particles: {
-        number: { value: 80, density: { enable: true, area: 800 } },
-        color: { value: "#999999" },
-        shape: { type: "circle" },
-        opacity: {
-          value: 0.5,
-          random: true,
-          anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
+    // Initialize particles after the library loads
+    window.addEventListener('load', function () {
+      tsParticles.load("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, area: 800 } },
+          color: { value: "#999999" },
+          shape: { type: "circle" },
+          opacity: {
+            value: 0.5,
+            random: true,
+            anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
+          },
+          size: {
+            value: 5,
+            random: true,
+            anim: { enable: true, speed: 5, size_min: 0.1, sync: false }
+          },
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#cccccc",
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 3,
+            direction: "none",
+            random: true,
+            straight: false,
+            outModes: { default: "out" }
+          }
         },
-        size: {
-          value: 5,
-          random: true,
-          anim: { enable: true, speed: 5, size_min: 0.1, sync: false }
+        interactivity: {
+          events: {
+            onHover: { enable: true, mode: "grab" },
+            onClick: { enable: true, mode: "push" }
+          },
+          modes: {
+            grab: { distance: 200, links: { opacity: 0.5 } },
+            push: { quantity: 4 }
+          }
         },
-        links: {
-          enable: true,
-          distance: 150,
-          color: "#cccccc",
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 3,
-          direction: "none",
-          random: true,
-          straight: false,
-          outModes: { default: "out" }
-        }
-      },
-      interactivity: {
-        events: {
-          onHover: { enable: true, mode: "grab" },
-          onClick: { enable: true, mode: "push" }
-        },
-        modes: {
-          grab: { distance: 200, links: { opacity: 0.5 } },
-          push: { quantity: 4 }
-        }
-      },
-      detectRetina: true,
-      background: { color: "#fafafa" }
+        detectRetina: true,
+        background: { color: "#fafafa" }
+      });
     });
   </script>
 </body>
