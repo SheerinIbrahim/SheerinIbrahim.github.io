@@ -6,14 +6,10 @@
   <title>Sheerin Ibrahim</title>
 
   <!-- Google Font -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
 
   <!-- Font Awesome for icons -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 
   <style>
     /* Reset & base */
@@ -195,10 +191,41 @@
     </div>
   </div>
 
-  <!-- load particles.js from CDN -->
+  <!-- Projects Preview -->
+  <section id="projects-preview">
+    <h2>My Projects</h2>
+    <div class="slider">
+      <button class="prev">&#10094;</button>
+      <div class="slides-container">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img src="proj1.png" alt="Project 1"/>
+          <div class="details">
+            <h3>Gesture Volume Control</h3>
+            <p>Use hand gestures to control system volume in real-time.</p>
+            <a href="https://github.com/.../GestureVolumeControl" class="btn" target="_blank">View Code</a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="proj2.png" alt="Project 2"/>
+          <div class="details">
+            <h3>Face Mask Detector</h3>
+            <p>Detects mask usage in public spaces with OpenCV & TensorFlow.</p>
+            <a href="https://github.com/.../FaceMaskDetector" class="btn" target="_blank">View Code</a>
+          </div>
+        </div>
+        <!-- Add more .slide blocks here -->
+      </div>
+      <button class="next">&#10095;</button>
+    </div>
+    <a href="projects.html" class="view-all">View All Projects</a>
+  </section>
+
+  <!-- particles.js & slider script -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    /* initialize particles.js */
+    // Initialize particles.js
     particlesJS('particles-js', {
       particles: {
         number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -236,48 +263,7 @@
       },
       retina_detect: true
     });
-  </script>
 
-  <div id="particles-js"></div>
-  <div class="card">…</div>
-
-  <!-- Projects Preview -->
-  <section id="projects-preview">
-    <h2>My Projects</h2>
-    <div class="slider">
-      <button class="prev">&#10094;</button>
-      <div class="slides-container">
-        <!-- Slide 1 -->
-        <div class="slide">
-          <img src="proj1.png" alt="Project 1"/>
-          <div class="details">
-            <h3>Gesture Volume Control</h3>
-            <p>Use hand gestures to control system volume in real-time.</p>
-            <a href="https://github.com/.../GestureVolumeControl" class="btn" target="_blank">View Code</a>
-          </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="slide">
-          <img src="proj2.png" alt="Project 2"/>
-          <div class="details">
-            <h3>Face Mask Detector</h3>
-            <p>Detects mask usage in public spaces with OpenCV & TensorFlow.</p>
-            <a href="https://github.com/.../FaceMaskDetector" class="btn" target="_blank">View Code</a>
-          </div>
-        </div>
-        <!-- Add more .slide blocks here -->
-      </div>
-      <button class="next">&#10095;</button>
-    </div>
-    <a href="projects.html" class="view-all">View All Projects</a>
-  </section>
-
-  <!-- particles.js & slider script -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS('particles-js',{ /* your particle settings */ });
-  </script>
-  <script>
     // Slider functionality
     const container = document.querySelector('.slides-container');
     const slideWidth = document.querySelector('.slide').offsetWidth + 32; // slide + margin
