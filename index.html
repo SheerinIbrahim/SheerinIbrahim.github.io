@@ -74,6 +74,7 @@
       font-size: 1.5rem;
       color: inherit;
       transition: transform .2s, color .2s;
+      text-decoration: none;
     }
     .social-links a.github   { color: #333; }
     .social-links a.linkedin { color: #0077B5; }
@@ -82,17 +83,11 @@
       transform: translateY(-3px);
       color: #000;
     }
-
-    /* Remove underline from social links */
-    .social-links a {
-      text-decoration: none;
-    }
-
   </style>
 </head>
 <body>
 
-  <!-- Particles.js -->
+  <!-- Particles.js container -->
   <div id="particles-js"></div>
 
   <!-- Content card -->
@@ -115,59 +110,46 @@
     </div>
   </div>
 
-  <!-- tsParticles library -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.4/tsparticles.bundle.min.js"></script>
+  <!-- load particles.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    window.addEventListener('load', function() {
-      // Ensure tsParticles is loaded before initializing
-      if (typeof tsParticles !== 'undefined') {
-        tsParticles.load("particles-js", {
-          particles: {
-            number: { value: 80, density: { enable: true, area: 800 } },
-            color: { value: "#999999" },
-            shape: { type: "circle" },
-            opacity: {
-              value: 0.5,
-              random: true,
-              anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false }
-            },
-            size: {
-              value: 5,
-              random: true,
-              anim: { enable: true, speed: 5, size_min: 0.1, sync: false }
-            },
-            links: {
-              enable: true,
-              distance: 150,
-              color: "#cccccc",
-              opacity: 0.4,
-              width: 1
-            },
-            move: {
-              enable: true,
-              speed: 3,
-              direction: "none",
-              random: true,
-              straight: false,
-              outModes: { default: "out" }
-            }
-          },
-          interactivity: {
-            events: {
-              onHover: { enable: true, mode: "grab" },
-              onClick: { enable: true, mode: "push" }
-            },
-            modes: {
-              grab: { distance: 200, links: { opacity: 0.5 } },
-              push: { quantity: 4 }
-            }
-          },
-          detectRetina: true,
-          background: { color: "#fafafa" }
-        });
-      } else {
-        console.error('tsParticles library is not loaded');
-      }
+    /* initialize particles.js */
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: '#999999' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5, random: true },
+        size: { value: 5, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#cccccc',
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: 'none',
+          random: true,
+          straight: false,
+          out_mode: 'out',
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: { enable: true, mode: 'grab' },
+          onclick: { enable: true, mode: 'push' }
+        },
+        modes: {
+          grab: { distance: 200, line_linked: { opacity: 0.5 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
     });
   </script>
 </body>
