@@ -16,7 +16,73 @@
     rel="stylesheet"/>
 
   <style>
-    /* … your existing reset, body, #particles-js & .card styles … */
+    /* Reset & base */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fafafa;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #333;
+    }
+
+    /* Particles container */
+    #particles-js {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
+    /* Card */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      padding: 3rem;
+      text-align: center;
+      width: 50%;
+      min-width: 280px;
+    }
+    @media (max-width: 768px) {
+      .card { width: 80%; }
+    }
+
+    /* Title */
+    .card h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .card h1 .blue { color: #6C63FF; }
+    .card h1 .red  { color: #FF6584; }
+
+    /* Subtitle */
+    .card p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    /* Social links */
+    .social-links a {
+      margin: 0 1rem;
+      font-size: 1.5rem;
+      color: inherit;
+      transition: transform .2s, color .2s;
+      text-decoration: none;
+    }
+    .social-links a.github   { color: #333; }
+    .social-links a.linkedin { color: #0077B5; }
+    .social-links a.email    { color: #EA4335; }
+    .social-links a:hover {
+      transform: translateY(-3px);
+      color: #000;
+    }
 
     /* Projects Preview Section */
     #projects-preview {
@@ -106,7 +172,72 @@
   </style>
 </head>
 <body>
-  <!-- existing hero, particles & .card -->
+  <!-- Particles.js container -->
+  <div id="particles-js"></div>
+
+  <!-- Content card -->
+  <div class="card">
+    <h1>
+      <span class="blue">Sheerin</span>
+      <span class="red">Ibrahim</span>
+    </h1>
+    <p>AI Engineer &amp; Data Scientist<br>Passionate about AI, ML, and Robotics</p>
+    <div class="social-links">
+      <a href="https://github.com/SheerinIbrahim"    class="github"   target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/sheerin-ibrahim/" class="linkedin" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:sheerinsultana96@gmail.com"     class="email"    title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- load particles.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    /* initialize particles.js */
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: '#999999' },
+        shape: { type: 'circle' },
+        opacity: { value: 0.5, random: true },
+        size: { value: 5, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#cccccc',
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: 'none',
+          random: true,
+          straight: false,
+          out_mode: 'out',
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: { enable: true, mode: 'grab' },
+          onclick: { enable: true, mode: 'push' }
+        },
+        modes: {
+          grab: { distance: 200, line_linked: { opacity: 0.5 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+
   <div id="particles-js"></div>
   <div class="card">…</div>
 
