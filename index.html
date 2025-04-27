@@ -4,35 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sheerin Ibrahim's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section id="intro">
-        <div class="container">
-            <h1>Sheerin Ibrahim</h1>
-            <p>Welcome to my portfolio! I am passionate about AI, Machine Learning, and Data Science.</p>
+    <!-- Pre Loader -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header>
+        <a href="#" class="logo">Sheerin Ibrahim</a>
+        <div id="menu" class="menu-btn">&#9776;</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="home">
+        <div id="particles-js"></div>
+        <div class="content">
+            <h2>Hi, I'm <span>Sheerin Ibrahim</span></h2>
+            <p>Welcome to my portfolio! I'm an AI Engineer passionate about data science and technology.</p>
+            <a href="#contact" class="btn">Contact Me <i class="fa fa-arrow-right"></i></a>
+        </div>
+        <div class="image">
+            <img src="your-image.jpg" alt="Sheerin Ibrahim">
         </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>My Projects</h2>
-            <div class="project">
-                <img src="path_to_project_image.jpg" alt="Project 1">
-                <h3>Project Name</h3>
-                <p>A short description of the project goes here.</p>
-                <a href="https://github.com/SheerinIbrahim/project-link" target="_blank">View Code</a>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="row">
+            <div class="image">
+                <img src="your-image.jpg" alt="About Sheerin">
             </div>
-            <!-- Add more projects here -->
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Sheerin Ibrahim</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+            <div class="content">
+                <h3>About Me</h3>
+                <p>I'm an AI Engineer and data science enthusiast with a focus on machine learning, deep learning, and cloud computing.</p>
+                <div class="box-container">
+                    <div class="box">
