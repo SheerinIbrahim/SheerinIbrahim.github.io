@@ -6,10 +6,14 @@
   <title>Sheerin Ibrahim</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"/>
 
   <!-- Font Awesome for icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"/>
 
   <style>
     /* Reset & base */
@@ -20,6 +24,7 @@
       height: 100vh;
       overflow: hidden;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       position: relative;
@@ -43,6 +48,7 @@
       text-align: center;
       width: 50%;
       min-width: 280px;
+      margin-top: 2rem;
     }
     @media (max-width: 768px) {
       .card { width: 80%; }
@@ -171,7 +177,7 @@
   <!-- Particles.js container -->
   <div id="particles-js"></div>
 
-  <!-- Content card -->
+  <!-- Content card (Introduction) -->
   <div class="card">
     <h1>
       <span class="blue">Sheerin</span>
@@ -222,10 +228,10 @@
     <a href="projects.html" class="view-all">View All Projects</a>
   </section>
 
-  <!-- particles.js & slider script -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    // Initialize particles.js
+    /* initialize particles.js */
     particlesJS('particles-js', {
       particles: {
         number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -263,7 +269,9 @@
       },
       retina_detect: true
     });
+  </script>
 
+  <script>
     // Slider functionality
     const container = document.querySelector('.slides-container');
     const slideWidth = document.querySelector('.slide').offsetWidth + 32; // slide + margin
