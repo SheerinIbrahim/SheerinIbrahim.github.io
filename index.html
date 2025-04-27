@@ -1,72 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sheerin Ibrahim</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-        .profile-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
-        .profile-card h1 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-        .profile-card p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .social-icons {
-            margin-top: 20px;
-        }
-        .social-icons a {
-            margin: 0 15px;
-            font-size: 24px;
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #0077b5;
-        }
-        .social-icons .email {
-            color: #ea4335;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Sheerin Ibrahim</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.4/tsparticles.bundle.min.js" defer></script>
+  <style>
+    /* full-screen moving background */
+    #tsparticles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+
+    /* page reset + font */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background:#fafafa;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height:100vh;
+      overflow:hidden;
+    }
+
+    /* half-page centered card */
+    .card {
+      width:50%;
+      min-width:280px;
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.1);
+      padding:3rem;
+      text-align:center;
+    }
+
+    .card h1 {
+      font-size:3rem;
+      margin-bottom:1rem;
+      line-height:1.2;
+    }
+    .card h1 .blue { color:#6C63FF; }
+    .card h1 .red  { color:#FF6584; }
+
+    .card p {
+      font-size:1.2rem;
+      color:#666;
+      margin-bottom:2rem;
+    }
+
+    .social-links a {
+      margin:0 1rem;
+      font-size:1.3rem;
+      font-weight:600;
+      text-decoration:none;
+      transition:transform .2s;
+    }
+    .social-links a.github { color:#333; }
+    .social-links a.linkedin { color:#0077B5; }
+    .social-links a.email { color:#EA4335; }
+
+    .social-links a:hover {
+      transform: translateY(-3px);
+    }
+
+    @media(max-width:768px){
+      .card { width:80%; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="profile-card">
-        <h1>Sheerin Ibrahim</h1>
-        <p>AI Engineer | Data Scientist | Passionate about technology and learning.</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/sheerin-ibrahim/" target="_blank" title="LinkedIn">LinkedIn</a>
-            <a href="mailto:sheerinsultana96@gmail.com" class="email" target="_blank" title="Email">Email</a>
-            <a href="https://github.com/SheerinIbrahim" target="_blank" title="GitHub">GitHub</a>
-        </div>
-    </div>
-</div>
+  <!-- particles.js container -->
+  <div id="tsparticles"></div>
 
+  <!-- your half-page card -->
+  <div class="card">
+    <h1>
+      <span class="blue">Sheerin</span>
+      <span class="red">Ibrahim</span>
+    </h1>
+    <p>
+      AI Engineer &amp; Data Scientist<br>
+      Passionate about AI, ML, and Robotics
+    </p>
+    <div class="social-links">
+      <a href="https://github.com/SheerinIbrahim"    target="_blank" class="github">GitHub</a>
+      <a href="https://www.linkedin.com/in/sheerin-ibrahim/" target="_blank" class="linkedin">LinkedIn</a>
+      <a href="mailto:sheerinsultana96@gmail.com"     class="email">Email</a>
+    </div>
+  </div>
+
+  <!-- tsParticles init -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      tsParticles.load("tsparticles", {
+        particles: {
+          number: { value: 60, density: { enable: true, area: 800 } },
+          color: { value: "#999999" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 3, random: true },
+          links: {
+            enable: true,
+            distance: 150,
+            color: "#cccccc",
+            opacity: 0.4,
+            width: 1
+          },
+          move: { enable: true, speed: 3, outModes: { default: "out" } }
+        },
+        interactivity: {
+          events: {
+            onHover: { enable: true, mode: "grab" },
+            onClick: { enable: true, mode: "push" }
+          },
+          modes: {
+            grab: { distance: 200, links: { opacity: 0.5 } },
+            push: { quantity: 4 }
+          }
+        },
+        detectRetina: true
+      });
+    });
+  </script>
 </body>
 </html>
