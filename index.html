@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sheerin Ibrahim</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -21,57 +21,57 @@
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Roboto', sans-serif;
-      background:#fafafa;
+      background: #fafafa;
       color: #333;
       display: flex;
       align-items: center;
       justify-content: center;
-      height:100vh;
-      overflow:hidden;
+      height: 100vh;
+      overflow: hidden;
     }
 
     /* half-page centered card */
     .card {
-      width:50%;
-      min-width:280px;
-      background:#fff;
-      border-radius:12px;
-      box-shadow:0 8px 24px rgba(0,0,0,0.1);
-      padding:3rem;
-      text-align:center;
+      width: 50%;
+      min-width: 280px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 3rem;
+      text-align: center;
     }
 
     .card h1 {
-      font-size:3rem;
-      margin-bottom:1rem;
-      line-height:1.2;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
     }
-    .card h1 .blue { color:#6C63FF; }
-    .card h1 .red  { color:#FF6584; }
+    .card h1 .blue { color: #6C63FF; }
+    .card h1 .red  { color: #FF6584; }
 
     .card p {
-      font-size:1.2rem;
-      color:#666;
-      margin-bottom:2rem;
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 2rem;
     }
 
     .social-links a {
-      margin:0 1rem;
-      font-size:1.3rem;
-      font-weight:600;
-      text-decoration:none;
-      transition:transform .2s;
+      margin: 0 1rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform .2s;
     }
-    .social-links a.github { color:#333; }
-    .social-links a.linkedin { color:#0077B5; }
-    .social-links a.email { color:#EA4335; }
+    .social-links a.github { color: #333; }
+    .social-links a.linkedin { color: #0077B5; }
+    .social-links a.email { color: #EA4335; }
 
     .social-links a:hover {
       transform: translateY(-3px);
     }
 
     @media(max-width:768px){
-      .card { width:80%; }
+      .card { width: 80%; }
     }
   </style>
 </head>
@@ -91,9 +91,9 @@
       Passionate about AI, ML, and Robotics
     </p>
     <div class="social-links">
-      <a href="https://github.com/SheerinIbrahim"    target="_blank" class="github">GitHub</a>
+      <a href="https://github.com/SheerinIbrahim" target="_blank" class="github">GitHub</a>
       <a href="https://www.linkedin.com/in/sheerin-ibrahim/" target="_blank" class="linkedin">LinkedIn</a>
-      <a href="mailto:sheerinsultana96@gmail.com"     class="email">Email</a>
+      <a href="mailto:sheerinsultana96@gmail.com" class="email">Email</a>
     </div>
   </div>
 
@@ -102,11 +102,11 @@
     window.addEventListener('DOMContentLoaded', () => {
       tsParticles.load("tsparticles", {
         particles: {
-          number: { value: 60, density: { enable: true, area: 800 } },
+          number: { value: 80, density: { enable: true, area: 800 } },
           color: { value: "#999999" },
           shape: { type: "circle" },
           opacity: { value: 0.5 },
-          size: { value: 3, random: true },
+          size: { value: 5, random: true },
           links: {
             enable: true,
             distance: 150,
@@ -114,7 +114,7 @@
             opacity: 0.4,
             width: 1
           },
-          move: { enable: true, speed: 3, outModes: { default: "out" } }
+          move: { enable: true, speed: 4, outModes: { default: "out" } }
         },
         interactivity: {
           events: {
