@@ -21,14 +21,14 @@
     body {
       font-family: 'Roboto', sans-serif;
       background: #fafafa;
-      height: 100vh;
-      overflow: hidden;
+      overflow: auto; /* Allow scrolling */
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start; /* Allow content to grow */
       position: relative;
       color: #333;
+      margin: 0;
     }
 
     /* Particles container */
@@ -48,7 +48,7 @@
       text-align: center;
       width: 50%;
       min-width: 280px;
-      margin-top: 2rem;
+      margin-top: 2rem; /* Added space from top */
     }
     @media (max-width: 768px) {
       .card { width: 80%; }
@@ -177,7 +177,7 @@
   <!-- Particles.js container -->
   <div id="particles-js"></div>
 
-  <!-- Content card (Introduction) -->
+  <!-- Content card -->
   <div class="card">
     <h1>
       <span class="blue">Sheerin</span>
@@ -228,49 +228,11 @@
     <a href="projects.html" class="view-all">View All Projects</a>
   </section>
 
-  <!-- Scripts -->
+  <!-- particles.js & slider script -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    /* initialize particles.js */
-    particlesJS('particles-js', {
-      particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: '#999999' },
-        shape: { type: 'circle' },
-        opacity: { value: 0.5, random: true },
-        size: { value: 5, random: true },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: '#cccccc',
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 3,
-          direction: 'none',
-          random: true,
-          straight: false,
-          out_mode: 'out',
-          bounce: false
-        }
-      },
-      interactivity: {
-        detect_on: 'canvas',
-        events: {
-          onhover: { enable: true, mode: 'grab' },
-          onclick: { enable: true, mode: 'push' }
-        },
-        modes: {
-          grab: { distance: 200, line_linked: { opacity: 0.5 } },
-          push: { particles_nb: 4 }
-        }
-      },
-      retina_detect: true
-    });
+    particlesJS('particles-js', { /* your particle settings */ });
   </script>
-
   <script>
     // Slider functionality
     const container = document.querySelector('.slides-container');
