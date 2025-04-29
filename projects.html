@@ -2,39 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Projects | Sheerin Ibrahim</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
-    body { font-family: 'Roboto', sans-serif; background: #fafafa; margin:0; padding:2rem; }
-    h1 { text-align:center; color:#6C63FF; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap:2rem; margin-top:2rem; }
-    .card { background:#fff; padding:1rem; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
-    .card img { width:100%; border-radius:4px; }
-    .card h3 { color:#ff6584; margin:1rem 0 .5rem; }
-    .card p { color:#555; margin-bottom:1rem; }
-    .card a { display:inline-block; padding:.6rem 1.2rem; background:#3498db; color:#fff; border-radius:4rem; text-decoration:none; }
-    .card a:hover { background:#2980b9; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fafafa;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #6C63FF;
+    }
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      display: flex;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      align-items: center;
+      padding: 1rem;
+    }
+    .card img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .card-content {
+      margin-left: 1.5rem;
+      flex: 1;
+    }
+    .card-content h3 {
+      color: #ff6584;
+      margin: 0 0 0.5rem;
+    }
+    .card-content p {
+      color: #555;
+      margin: 0 0 1rem;
+    }
+    .card-content a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #3498db;
+      color: #fff;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .card-content a:hover {
+      background: #2980b9;
+    }
+    @media (max-width: 600px) {
+      .card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .card img {
+        margin-bottom: 1rem;
+      }
+      .card-content {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>All Projects</h1>
-  <div class="grid">
+  <div class="project-list">
     <div class="card">
       <img src="images/gesturevolumecontrol.png" alt="Gesture Volume Control"/>
-      <h3>Gesture Volume Control</h3>
-      <p>Control your system volume via hand gestures in real time.</p>
-      <a href="https://github.com/.../GestureVolumeControl" target="_blank">View Code</a>
+      <div class="card-content">
+        <h3>Gesture Volume Control</h3>
+        <p>Control your system volume via hand gestures in real time.</p>
+        <a href="https://github.com/.../GestureVolumeControl" target="_blank">View Code</a>
+      </div>
     </div>
+
     <div class="card">
       <img src="images/gesturebrightness.png" alt="Face Mask Detector"/>
-      <h3>Face Mask Detector</h3>
-      <p>Detects mask usage in images and video streams with ML.</p>
-      <a href="https://github.com/.../FaceMaskDetector" target="_blank">View Code</a>
+      <div class="card-content">
+        <h3>Face Mask Detector</h3>
+        <p>Detects mask usage in images and video streams with ML.</p>
+        <a href="https://github.com/.../FaceMaskDetector" target="_blank">View Code</a>
+      </div>
     </div>
-    <!-- Add more project cards here -->
+
+    <!-- Add more project cards below similarly -->
   </div>
 </body>
 </html>
