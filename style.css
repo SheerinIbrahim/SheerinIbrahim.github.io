@@ -173,6 +173,7 @@ body {
   border-radius: 50%;
   z-index: 10; 
 }
+
 .slider button:hover {
   background: rgba(255, 255, 255, 1); /* Make the button slightly more visible on hover */
 }
