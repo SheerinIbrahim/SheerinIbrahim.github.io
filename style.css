@@ -86,12 +86,15 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
+
 .slides-container {
   display: flex;
   overflow: hidden;
-  scroll-behavior: smooth;
   width: 100%;
+  padding-left: 10px; 
+  padding-right: 10px; 
 }
 
 /* Slide (Project Card) */
@@ -165,7 +168,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   border: none;
   font-size: 2rem;
   cursor: pointer;
@@ -179,6 +182,8 @@ body {
 }
 .slider .prev { left: 0; }
 .slider .next { right: 0; }
+
+
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
