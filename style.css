@@ -38,7 +38,7 @@ body {
 
 /* Title */
 .card h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -47,15 +47,15 @@ body {
 
 /* Subtitle */
 .card p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #666;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Social links */
 .social-links a {
   margin: 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: inherit;
   transition: transform .2s, color .2s;
   text-decoration: none;
@@ -63,7 +63,7 @@ body {
 .social-links a.github   { color: #333; }
 .social-links a.linkedin { color: #0077B5; }
 .social-links a.email    { color: #EA4335; }
-.social-links a.view-all { color:#0077B5; font-weight: 550; }
+.social-links a.view-all { color: #0077B5; font-weight: 550; }
 .social-links a:hover {
   transform: translateY(-3px);
   color: #000;
@@ -71,12 +71,12 @@ body {
 
 /* Projects Preview Section */
 #projects-preview {
-  width: 70%;
-  margin: 1rem auto;
+  width: 80%;
+  margin: 2rem auto 1rem auto; /* Tightened space */
   text-align: center;
 }
 #projects-preview h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
   color: #333;
 }
@@ -94,24 +94,24 @@ body {
 
 /* Slide (Project Card) */
 .slide {
-  min-width: 80%;
-  margin: 0 1rem;
+  min-width: 70%;
+  margin: 0 0.8rem;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: flex;
   overflow: hidden;
-  height: 280px; /* Fixed height */
+  height: 220px; /* Smaller card height */
 }
 .slide img {
-  width: 50%;
+  width: 40%; /* Shrunk image width */
   height: 100%;
   object-fit: cover;
 }
 .slide .details {
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: left;
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -119,26 +119,27 @@ body {
 .slide .details h3 {
   margin-top: 0;
   color: #6C63FF;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .slide .details p {
   color: #666;
-  margin: 0.5rem 0 1rem;
-  font-size: 0.95rem;
+  margin: 0.5rem 0 0.8rem;
+  font-size: 0.9rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Max 3 lines */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 .slide .details .btn {
   display: inline-block;
-  padding: 0.7rem 1.4rem;
+  padding: 0.5rem 1.2rem;
   background: #3498db;
   color: #fff;
-  border-radius: 4rem;
+  border-radius: 2rem;
   text-decoration: none;
   transition: background 0.3s;
+  font-size: 0.9rem;
   align-self: flex-start;
 }
 .slide .details .btn:hover {
@@ -154,7 +155,7 @@ body {
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  padding: .2rem .6rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 50%;
 }
 .slider .prev { left: 0; }
@@ -171,6 +172,6 @@ body {
     width: 100%;
   }
   .slide img {
-    height: 180px;
+    height: 150px;
   }
 }
