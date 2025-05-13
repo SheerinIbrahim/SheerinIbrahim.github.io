@@ -8,7 +8,6 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-
   <!-- Font Awesome for icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
 
@@ -19,73 +18,81 @@
   <!-- Particles.js container -->
   <div id="particles-js"></div>
 
-  <!-- Content card -->
-  <div class="card">
-    <h1>
-      <span class="blue">Sheerin</span>
-      <span class="red">Ibrahim</span>
-    </h1>
-    <p>AI Engineer &amp; Data Scientist<br>Passionate about AI, ML, and Robotics</p>
-    <div class="social-links">
-      <a href="https://github.com/SheerinIbrahim" class="github" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/sheerin-ibrahim/" class="linkedin" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="mailto:sheerinsultana96@gmail.com" class="email" title="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
-
-<!-- View All Projects Button -->
-    <a href="projects.html" class="view-all" title="View All Projects">
-       PROJECTS
-    </a>
-    </div>
-  </div>
-
-  <!-- Projects Preview -->
-  <section id="projects-preview">
-    <div class="slider">
-      <button class="prev">&#10094;</button>
-      <div class="slides-container">
-        <!-- Slide 1 -->
-        <div class="slide">
-          <img src="images/gesturevolumecontrol.png" alt="Project 1"/>
-          <div class="details">
-            <h3>Gesture Based Volume Control</h3>
-            <p>Control system volume using hand gestures detected via a webcam using OpenCV and MediaPipe. Real-time finger distance adjusts the volume dynamically.</p>
-            <a href="https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_volume_control" class="btn" target="_blank">View Project</a>
-          </div>
-        </div>
-       
-        <!-- Slide 2 -->
-        <div class="slide">
-          <img src="images/yolo_detection.png" alt="Project 2"/>
-          <div class="details">
-            <h3>YOLOv5 Live Webcam Detection</h3>
-            <p>Real-time object detection from webcam using YOLOv5 and OpenCV.</p>
-            <a href="https://github.com/SheerinIbrahim/AI_Projects/tree/main/yolov5-live-webcam-detection" class="btn" target="_blank">View Project</a>
-          </div>
-        </div>
-        
-         <!-- Slide 3 -->
-        <div class="slide">
-          <img src="images/gesturebrightness.png" alt="Project 3"/>
-          <div class="details">
-            <h3>Gesture Based Brightness Control</h3>
-            <p>Adjust screen brightness using hand gestures with real-time webcam input. Utilizes OpenCV and MediaPipe to measure finger spacing for brightness mapping.</p>
-            <a href="https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_brightness_control" class="btn" target="_blank">View Project</a>
-          </div>
-        </div>
-        
-        <!-- Add more .slide blocks here -->
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="card">
+      <h1>
+        <span class="blue">Sheerin</span>
+        <span class="red">Ibrahim</span>
+      </h1>
+      <p>AI Engineer &amp; Data Scientist<br>Passionate about AI, ML, and Robotics</p>
+      <div class="social-links">
+        <a href="https://github.com/SheerinIbrahim" class="github" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sheerin-ibrahim/" class="linkedin" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:sheerinsultana96@gmail.com" class="email" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
       </div>
-      <button class="next">&#10095;</button>
     </div>
   </section>
 
-  <!-- particles.js script -->
+  <!-- Projects Section -->
+  <section id="projects-preview">
+  
+<div class="grid">
+  <!-- Project 1 -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="images/gesturevolumecontrol.png" alt="Gesture Volume Control"/>
+        <h3>Gesture Volume</h3>
+      </div>
+      <div class="flip-card-back">
+        <h3>Gesture Volume Control</h3>
+        <p>Control volume using webcam + gestures via OpenCV & MediaPipe.</p>
+        <a href="https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_volume_control" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="images/yolo_detection.png" alt="YOLO Detection"/>
+        <h3>YOLOv5 Detection</h3>
+      </div>
+      <div class="flip-card-back">
+        <h3>YOLOv5 Webcam Detection</h3>
+        <p>Real-time object detection with YOLOv5 using PyTorch & OpenCV.</p>
+        <a href="https://github.com/SheerinIbrahim/AI_Projects/tree/main/yolov5-live-webcam-detection" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="images/gesturebrightness.png" alt="Gesture Brightness Control"/>
+        <h3>Gesture Brightness</h3>
+      </div>
+      <div class="flip-card-back">
+        <h3>Brightness Control</h3>
+        <p>Adjust screen brightness using hand gestures in real time.</p>
+        <a href="https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_brightness_control" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Scripts -->
   <script src="particles.min.js"></script>
   <script src="script.js"></script>
 </body>
