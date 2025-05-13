@@ -1,6 +1,6 @@
 [
   {
-    "image": "images/balloongame.png",
+    "image": "images/balloonpop.png",
     "shortName": "Hand gesture balloon game",
     "description": "OpenCV-based game to pop balloons using hand gestures.",
     "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Hand-gesture-balloon-game"
