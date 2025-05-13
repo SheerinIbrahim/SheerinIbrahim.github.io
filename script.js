@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <h3>${project.shortName}</h3>
             </div>
             <div class="flip-card-back">
-              <h3>${project.title}</h3>
+              
               <p>${project.description}</p>
               <a href="${project.link}" target="_blank">View Project</a>
             </div>
