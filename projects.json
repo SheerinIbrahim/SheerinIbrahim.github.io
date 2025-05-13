@@ -2,7 +2,7 @@
   {
     "image": "images/gesturevolumecontrol.png",
     "shortName": "Gesture Volume",
-    
+    "title": "Gesture Volume Control",
     "description": "Control volume using webcam + gestures via OpenCV & MediaPipe.",
     "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_volume_control"
   },
