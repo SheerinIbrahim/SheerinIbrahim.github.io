@@ -1,0 +1,23 @@
+[
+  {
+    "image": "images/gesturevolumecontrol.png",
+    "shortName": "Gesture Volume",
+    "title": "Gesture Volume Control",
+    "description": "Control volume using webcam + gestures via OpenCV & MediaPipe.",
+    "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_volume_control"
+  },
+  {
+    "image": "images/yolo_detection.png",
+    "shortName": "YOLOv5 Detection",
+    "title": "YOLOv5 Webcam Detection",
+    "description": "Real-time object detection with YOLOv5 using PyTorch & OpenCV.",
+    "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/yolov5-live-webcam-detection"
+  },
+  {
+    "image": "images/gesturebrightness.png",
+    "shortName": "Gesture Brightness",
+    "title": "Brightness Control",
+    "description": "Adjust screen brightness using hand gestures in real time.",
+    "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_brightness_control"
+  }
+]
