@@ -1,25 +1,25 @@
 [
   {
-    "image": "images/gesturevolumecontrol.png",
-    "shortName": "Gesture Volume",
-    "description": "Control volume using webcam + gestures via OpenCV & MediaPipe.",
-    "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_volume_control"
+    "image": "images/balloongame.png",
+    "shortName": "Hand gesture balloon game",
+    "description": "OpenCV-based game to pop balloons using hand gestures.",
+    "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Hand-gesture-balloon-game"
   },
   {
     "image": "images/gesturevolumecontrol.png",
-    "shortName": "Gesture Volume",
-    "description": "Control volume using webcam + gestures via OpenCV & MediaPipe.",
+    "shortName": "Gesture based volume control",
+    "description": "Control volume using webcam & gestures via OpenCV & MediaPipe.",
     "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_volume_control"
   },
   {
     "image": "images/yolo_detection.png",
-    "shortName": "YOLOv5 Detection",
+    "shortName": "YOLOv5 object detection ",
     "description": "Real-time object detection with YOLOv5 using PyTorch & OpenCV.",
     "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/yolov5-live-webcam-detection"
   },
   {
     "image": "images/gesturebrightness.png",
-    "shortName": "Gesture based Brightness Control",
+    "shortName": "Gesture based brightness control",
     "description": "Adjust screen brightness using hand gestures in real time.",
     "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_brightness_control"
   }
