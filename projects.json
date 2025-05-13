@@ -2,6 +2,13 @@
   {
     "image": "images/gesturevolumecontrol.png",
     "shortName": "Gesture Volume",
+    
+    "description": "Control volume using webcam + gestures via OpenCV & MediaPipe.",
+    "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_volume_control"
+  },
+  {
+    "image": "images/gesturevolumecontrol.png",
+    "shortName": "Gesture Volume",
     "title": "Gesture Volume Control",
     "description": "Control volume using webcam + gestures via OpenCV & MediaPipe.",
     "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_volume_control"
@@ -15,7 +22,7 @@
   },
   {
     "image": "images/gesturebrightness.png",
-    "shortName": "Gesture Brightness",
+    "shortName": "Gesture based Brightness Control",
     "title": "Brightness Control",
     "description": "Adjust screen brightness using hand gestures in real time.",
     "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_brightness_control"
