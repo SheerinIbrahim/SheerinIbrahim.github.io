@@ -1,25 +1,31 @@
 [
+    {
+    "image": "images/resumeanalyzer.png",
+    "shortName": "AI Resume Analyzer",
+    "description": "NLP tool to compares resume with job description and return match score.",
+    "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/AI_resume_analyzer"
+  },
   {
     "image": "images/balloonpop.png",
-    "shortName": "Hand gesture balloon game",
+    "shortName": "Hand Gesture Balloon Game",
     "description": "OpenCV-based game to pop balloons using hand gestures.",
     "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Hand-gesture-balloon-game"
   },
   {
+    "image": "images/yolo_detection.png",
+    "shortName": "YOLOv5 Object Detection ",
+    "description": "Real-time object detection with YOLOv5 using PyTorch & OpenCV.",
+    "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/yolov5-live-webcam-detection"
+  },
+    {
     "image": "images/gesturevolumecontrol.png",
-    "shortName": "Gesture based volume control",
+    "shortName": "Gesture Based Volume Control",
     "description": "Control volume using webcam & gestures via OpenCV & MediaPipe.",
     "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_volume_control"
   },
   {
-    "image": "images/yolo_detection.png",
-    "shortName": "YOLOv5 object detection ",
-    "description": "Real-time object detection with YOLOv5 using PyTorch & OpenCV.",
-    "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/yolov5-live-webcam-detection"
-  },
-  {
     "image": "images/gesturebrightness.png",
-    "shortName": "Gesture based brightness control",
+    "shortName": "Gesture Based Brightness Control",
     "description": "Adjust screen brightness using hand gestures in real time.",
     "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Gesture_based_brightness_control"
   }
