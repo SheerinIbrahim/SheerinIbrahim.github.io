@@ -1,4 +1,10 @@
 [
+     {
+    "image": "images/datadetective.png",
+    "shortName": "Data Detective",
+    "description": "open-source Exploratory Data Analysis (EDA) tool built using Python and Streamlit.",
+    "link": "https://github.com/SheerinIbrahim/AI_Projects/tree/main/Data_detective"
+  },
     {
     "image": "images/resumeanalyzer.png",
     "shortName": "AI Resume Analyzer",
